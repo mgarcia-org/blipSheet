@@ -1,0 +1,45 @@
+%GLOBALS ,%TRACK #1 SFX LEAD,%TRACK #2 BASS CLEAN,%TRACK #3 BASS DISTORED,%TRACK #4 SNARE,%TRACK #5 SAMPLE
+stepticks:32,[track:square,[track:triangle,[track:sawtooth,[track:noise,[track:sample
+vm:200,vm:20 %used to mute track etc,vm:50,vm:20,vm:25,vm:25
+[instr,[grp,[grp,[grp,[grp,[grp
+v:<:255:>:192:128:64:48:32,e:vs:0;v:255,a:c2;s:1,a:c1;s:1,i:1,
+a:<:0:1200:>,e:vs:180;v:0,r;s:1,r;s:1,s:2,% Set sample pika
+],a:c3;s:1,a:c2;s:1,a:c1;s:1,a:c7;s:1;r,d:pika
+,a:e3;s:1,r;s:1,r;s:1,s:1,e:pr:48
+[instr,a:g3;s:1,a:c2;s:2,a:c1;s:2,],
+v:255:192:128:64:48:32,r,a:g2;s:1,a:g1;s:1,,%20 steps
+a:0:-1200:800:1200:267:0,s:1,a:g1;s:1,a:g0;s:1,[grp,a:c4;s:2;r;s:2
+],a:a3,r;s:2,r;s:2,i:1,a:c4;s:2;r;s:2
+,s:2,,,a:c7;s:1;r,a:d4;a:e4;s:4;a:c4;s:4;r;s:4
+% Define sample pika.wav,r,a:f1;s:1,a:f0;s:1,s:1,]
+% copy to local dir from pika-pika.blip,s:2,r;s:1,r;s:1,a:c7;s:1;r,
+[sample:pika,],a:f1;s:2,a:f0;s:2,a:c7;s:1;r,
+load:wav:`pika.wav`,,r;s:2,r;s:2,],
+ds:7144:13935,[grp,],],,
+v:10,e:vs:0;v:255,,,g:0,s:8
+],e:vs:180;v:0,[grp,[grp,g:0,g:0
+,a:c4;s:8,a:c2;s:1,a:c1;s:1,g:0,s:12
+,r,r;s:1,r;s:1,g:0,s:16
+,] %grp 1,a:c2;s:1,a:c1;s:1,g:0,s:8
+,,r;s:1,r;s:1,g:0,
+,s:16,a:c2;s:2,a:c1;s:2,g:0,
+,s:16,a:g2;s:1,a:g1;s:1,g:1,
+,,a:g1;s:1,a:g0;s:1,,
+,dc:8,r;s:2,r;s:2,x,x
+,i:0,,,,
+,g:0,a:f1;s:1,a:f0;s:1,],]
+,,r;s:1,r;s:1,,
+,e:vb:10:267,a:a2;s:2,a:a1;s:2,,
+,g:0,r;s:2,r;s:2,,
+,e:vb:0,],],,
+,,,,,
+,i,g:0,g:0,,
+,g:1,g:1,g:1,,
+,,,,,
+,e:vb:10:267,x,x,,
+,g:1,,,,
+,e:vb:0,],],,
+,,,,,
+,x,,,,
+,,,,,
+,],,,,
